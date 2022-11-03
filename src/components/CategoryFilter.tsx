@@ -17,7 +17,14 @@ export const CategoryFilter: React.FC<Props> = ({
       <a
         href="#/"
         data-cy="AllCategories"
-        className="button is-success mr-6 is-outlined"
+        className={classNames(
+          'button',
+          'is-success',
+          'mr-6',
+          {
+            'is-outlined': filtersByCategory.length !== 0,
+          },
+        )}
         onClick={() => {
           setFiltersByCategory([]);
         }}
