@@ -84,7 +84,8 @@ export const App: React.FC = () => {
         .trim()
         .split(' ')
         .filter(words => words !== '')
-        .join(' ');
+        .join(' ')
+        .toLowerCase();
 
       const normilizedProductName = productByQuery.name.toLowerCase();
 
